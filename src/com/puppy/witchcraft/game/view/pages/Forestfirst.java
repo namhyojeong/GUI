@@ -39,21 +39,32 @@ public class Forestfirst extends JPanel{
 		logo.setBounds(180, 90, 440, 160);
 
 		/* 로그인 버튼 생성 */
-		JButton forestgoBtn = new JButton(new ImageIcon("images/select/forest01_go.png"));
-		forestgoBtn.setBounds(330, 125, 450, 100);
+		JButton forestgoBtn = new JButton(new ImageIcon("images/select/forest/forest1-touch1.png"));
+		forestgoBtn.setBounds(190, 410, 115, 95);
 		forestgoBtn.setContentAreaFilled(false);
 
-		JButton forestgoBtn1 = new JButton(new ImageIcon("images/select/forest02_go.png"));
-		forestgoBtn1.setBounds(330, 225, 450, 100);
+		JButton forestgoBtn1 = new JButton(new ImageIcon("images/select/forest/forest1-touch2.png"));
+		forestgoBtn1.setBounds(500, 275, 115, 95);
 		forestgoBtn1.setContentAreaFilled(false);
 		
-		JButton forestgoBtn2 = new JButton(new ImageIcon("images/select/forest03_go.png"));
-		forestgoBtn2.setBounds(330, 325, 450, 100);
+		JButton forestgoBtn2 = new JButton(new ImageIcon("images/select/forest/forest3-touch1.png"));
+		forestgoBtn2.setBounds(540, 60, 115, 95);
 		forestgoBtn2.setContentAreaFilled(false);
+		
+		JButton invenBtn = new JButton(new ImageIcon("images/ui/ui_inventory.png"));
+		invenBtn.setBounds(620, 460, 70, 70);
+		invenBtn.setContentAreaFilled(false);
+		
+		JButton recipeBtn = new JButton(new ImageIcon("images/ui/ui_recipe.png"));
+		recipeBtn.setBounds(710, 460, 70, 70);
+		recipeBtn.setContentAreaFilled(false);
+		
 		
 		JButton forestexit = new JButton(new ImageIcon("images/ui/button_quit.png"));
 		forestexit.setBounds(0, 460, 170, 70);
 		forestexit.setContentAreaFilled(false);
+		
+		
 
 
 		/* 나가기 버튼 클릭 시 시스템 종료*/
@@ -76,8 +87,10 @@ public class Forestfirst extends JPanel{
 		this.add(forestgoBtn1);
 		this.add(forestgoBtn2);
 		this.add(forestexit);
+		this.add(invenBtn);
+		this.add(recipeBtn);
 		this.add(background);
-
+		
 		/* 프레임에 패널 올리기*/
 		mf.add(this);
 

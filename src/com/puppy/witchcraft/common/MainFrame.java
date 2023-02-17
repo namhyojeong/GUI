@@ -8,6 +8,7 @@ import javax.swing.JFrame;
 
 import com.puppy.witchcraft.game.view.GameMenu;
 import com.puppy.witchcraft.game.view.pages.ForestMenu;
+import com.puppy.witchcraft.game.view.pages.Forestfirst;
 
 public class MainFrame extends JFrame {
 	
@@ -21,7 +22,7 @@ public class MainFrame extends JFrame {
 		
 		/* 초기 게임 시작화면으로 프레임값과 함께 넘어감 */
 //		new GameMenu(this);
-		new ForestMenu(this);
+//		new ForestMenu(this);
 		new Forestfirst(this);
 		
 		/*프레임창 아이콘*/
