@@ -14,6 +14,7 @@ import javax.swing.JPanel;
 
 import com.puppy.witchcraft.common.CommonConstants;
 import com.puppy.witchcraft.common.MainFrame;
+import com.puppy.witchcraft.game.view.GameMenu;
 
 public class ForestMenu extends JPanel{
 
@@ -40,22 +41,40 @@ public class ForestMenu extends JPanel{
 		logo.setBounds(180, 90, 440, 160);
 
 		/* 로그인 버튼 생성 */
-		JButton forestgoBtn = new JButton(new ImageIcon("images/select/forest01_go.png"));
-		forestgoBtn.setBounds(330, 125, 450, 100);
-		forestgoBtn.setContentAreaFilled(false);
-
-		JButton forestgoBtn1 = new JButton(new ImageIcon("images/select/forest02_go.png"));
-		forestgoBtn1.setBounds(330, 225, 450, 100);
+		JButton forestgoBtn1 = new JButton(new ImageIcon("images/select/forest01_go.png"));
+		forestgoBtn1.setBounds(330, 125, 450, 100);
 		forestgoBtn1.setContentAreaFilled(false);
-		
-		JButton forestgoBtn2 = new JButton(new ImageIcon("images/select/forest03_go.png"));
-		forestgoBtn2.setBounds(330, 325, 450, 100);
+		forestgoBtn1.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+			
+				changePanel(mf, forestMenu , new Forestfirst(mf));
+			}
+		});
+		JButton forestgoBtn2 = new JButton(new ImageIcon("images/select/forest02_go.png"));
+		forestgoBtn2.setBounds(330, 225, 450, 100);
 		forestgoBtn2.setContentAreaFilled(false);
+		forestgoBtn2.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+			
+				changePanel(mf, forestMenu , new Forestsecond(mf));
+			}
+		});
+		JButton forestgoBtn3 = new JButton(new ImageIcon("images/select/forest03_go.png"));
+		forestgoBtn3.setBounds(330, 325, 450, 100);
+		forestgoBtn3.setContentAreaFilled(false);
+		forestgoBtn3.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				changePanel(mf, forestMenu , new Forestthird(mf));
+			}
+		});
 		
 		JButton forestexit = new JButton(new ImageIcon("images/ui/button_quit.png"));
 		forestexit.setBounds(0, 460, 170, 70);
 		forestexit.setContentAreaFilled(false);
-
 
 		/* 나가기 버튼 클릭 시 시스템 종료*/
 		forestexit.addActionListener(new ActionListener() {
@@ -66,6 +85,7 @@ public class ForestMenu extends JPanel{
 			}
 		});
 
+		
 		/* 컴포넌트들 넣을 패널 생성 */
 		this.setLayout(null);
 		this.setBounds(0, 0, 800, 580);
@@ -73,9 +93,9 @@ public class ForestMenu extends JPanel{
 		/* 패널에 컴포넌트들 삽입 */
 		this.add(logo);
 
-		this.add(forestgoBtn);
 		this.add(forestgoBtn1);
 		this.add(forestgoBtn2);
+		this.add(forestgoBtn3);
 		this.add(forestexit);
 		this.add(background);
 
@@ -84,5 +104,13 @@ public class ForestMenu extends JPanel{
 
 		/* 배경이미지 레이어위치 맨뒤로 보내기 */
 		mf.getLayeredPane().setLayer(background, 0);
+	}
+
+	public Object getForestgoBtn1() {
+		return null;
+	}
+
+	public Object getForestgoBtn2() {
+		return null;
 	}
 }
