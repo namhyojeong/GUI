@@ -34,8 +34,8 @@ public class storePage extends JPanel {
       /* 라벨에 상점재료리스트 이미지 삽입 */
       JLabel storePurchase = new JLabel(new ImageIcon("images/ui/storeitem_list.png"));
       storePurchase.setBounds(20, 30, 340, 400);
-      JScrollPane scrollpane = new JScrollPane(storePurchase, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS); 
-      scrollpane.setBounds(20, 30, 340, 400);
+//      JScrollPane scrollpane = new JScrollPane(storePurchase, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS); 
+//      scrollpane.setBounds(20, 30, 340, 400);
       
       /* 라벨에 재료인벤토리 이미지 삽입 */
       JLabel storeSell = new JLabel(new ImageIcon("images/ui/inventory_item.png"));
@@ -93,7 +93,8 @@ public class storePage extends JPanel {
       this.add(textId);
       this.add(quitBtn);
       this.add(background);
-      this.add(scrollpane);
+//      this.add(scrollpane);
+      
       /* 프레임에 패널 올리기 */
       mf.add(this);
       

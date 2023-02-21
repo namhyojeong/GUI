@@ -1,9 +1,7 @@
-package com.puppy.witchcraft.game.view.pages;
+package com.puppy.witchcraft.game.view;
 
 import static com.puppy.witchcraft.common.CommonConstants.changePanel;
-import static com.puppy.witchcraft.common.CommonConstants.setButtonColor;
 
-import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -12,16 +10,12 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import com.puppy.witchcraft.common.CommonConstants;
 import com.puppy.witchcraft.common.MainFrame;
-import com.puppy.witchcraft.game.view.GameMenu;
+import com.puppy.witchcraft.game.view.pages.Forestfirst;
+import com.puppy.witchcraft.game.view.pages.Forestsecond;
+import com.puppy.witchcraft.game.view.pages.Forestthird;
 
 public class ForestMenu extends JPanel{
-
-	/* 전역변수에 컬러파레트 지정 */
-	private Color MAINCOLOR = CommonConstants.MAINCOLOR;
-	private Color NAVYCOLOR = CommonConstants.NAVYCOLOR;
-	private Color GRAYCOLOR = CommonConstants.GRAYCOLOR;
 
 	private MainFrame mf;
 	private ForestMenu forestMenu;
@@ -47,7 +41,7 @@ public class ForestMenu extends JPanel{
 		forestgoBtn1.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-			
+
 				changePanel(mf, forestMenu , new Forestfirst(mf));
 			}
 		});
@@ -57,7 +51,7 @@ public class ForestMenu extends JPanel{
 		forestgoBtn2.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-			
+
 				changePanel(mf, forestMenu , new Forestsecond(mf));
 			}
 		});
@@ -67,11 +61,11 @@ public class ForestMenu extends JPanel{
 		forestgoBtn3.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+
 				changePanel(mf, forestMenu , new Forestthird(mf));
 			}
 		});
-		
+
 		JButton forestexit = new JButton(new ImageIcon("images/ui/button_quit.png"));
 		forestexit.setBounds(0, 460, 170, 70);
 		forestexit.setContentAreaFilled(false);
@@ -80,12 +74,11 @@ public class ForestMenu extends JPanel{
 		forestexit.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("게임을 종료합니다.");
-				System.exit(0);
+				changePanel(mf, forestMenu , new MainMap(mf));
 			}
 		});
 
-		
+
 		/* 컴포넌트들 넣을 패널 생성 */
 		this.setLayout(null);
 		this.setBounds(0, 0, 800, 580);

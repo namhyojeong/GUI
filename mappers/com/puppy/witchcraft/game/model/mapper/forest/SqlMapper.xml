@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.puppy.witchcraft.game.model.mapper.forest.SqlMapper">
+
+	<resultMap type="com.puppy.witchcraft.game.model.dto.ItemDTO" id="ForestItemDTO">
+		<id property="number" column="ITEM_NO"/>
+		<result property="type" column="ITEM_TYPE"/>
+		<result property="name" column="ITEM_NAME"/>
+		<result property="info" column="ITEM_INFO"/>
+		<result property="sell" column="ITEM_SELL"/>
+		<result property="buy" column="ITEM_BUY"/>
+		<result property="imgno" column="IMAGE_NO"/>
+	</resultMap>	
+
+</mapper>

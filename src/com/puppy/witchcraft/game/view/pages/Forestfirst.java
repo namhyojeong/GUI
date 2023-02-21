@@ -2,7 +2,6 @@ package com.puppy.witchcraft.game.view.pages;
 
 import static com.puppy.witchcraft.common.CommonConstants.changePanel;
 
-import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -11,15 +10,10 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import com.puppy.witchcraft.common.CommonConstants;
 import com.puppy.witchcraft.common.MainFrame;
-import com.puppy.witchcraft.game.controller.Forest1Controller;
+import com.puppy.witchcraft.game.view.ForestMenu;
 
 public class Forestfirst extends JPanel{
-
-	private Color MAINCOLOR = CommonConstants.MAINCOLOR;
-	private Color NAVYCOLOR = CommonConstants.NAVYCOLOR;
-	private Color GRAYCOLOR = CommonConstants.GRAYCOLOR;
 
 	private MainFrame mf;
 	private Forestfirst forestfirst;
@@ -42,51 +36,47 @@ public class Forestfirst extends JPanel{
 		JButton getItemBtn = new JButton(new ImageIcon("images/select/forest/forest1-touch1.png"));
 		getItemBtn.setBounds(190, 410, 115, 95);
 		getItemBtn.setContentAreaFilled(false);
-
-		getItemBtn.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				Forest1Controller.getItem1();
-			}
-		});
+		getItemBtn.setBorderPainted(false);
 		
 		JButton getItemBtn1 = new JButton(new ImageIcon("images/select/forest/forest1-touch2.png"));
 		getItemBtn1.setBounds(500, 275, 115, 95);
 		getItemBtn1.setContentAreaFilled(false);
+		getItemBtn1.setBorderPainted(false);
 		
 		JButton getItemBtn2 = new JButton(new ImageIcon("images/select/forest/forest1-touch3.png"));
 		getItemBtn2.setBounds(540, 60, 115, 95);
 		getItemBtn2.setContentAreaFilled(false);
+		getItemBtn2.setBorderPainted(false);
 		
 		JButton invenBtn = new JButton(new ImageIcon("images/ui/ui_inventory.png"));
 		invenBtn.setBounds(620, 460, 70, 70);
 		invenBtn.setContentAreaFilled(false);
+		invenBtn.setBorderPainted(false);
 		
 		JButton recipeBtn = new JButton(new ImageIcon("images/ui/ui_recipe.png"));
 		recipeBtn.setBounds(710, 460, 70, 70);
 		recipeBtn.setContentAreaFilled(false);
-		
-		
+		recipeBtn.setBorderPainted(false);
+
 		JButton forestexit = new JButton(new ImageIcon("images/ui/button_quit.png"));
 		forestexit.setBounds(0, 460, 170, 70);
 		forestexit.setContentAreaFilled(false);
+		forestexit.setBorderPainted(false);
 		forestexit.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-			
+
 				changePanel(mf, forestfirst , new ForestMenu(mf));
-				
+
 			}
 		});
-		
 
 
 		/* 나가기 버튼 클릭 시 숲 선택화면으로 이동*/
 		forestexit.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+
 			}
 		});
 
@@ -104,7 +94,7 @@ public class Forestfirst extends JPanel{
 		this.add(invenBtn);
 		this.add(recipeBtn);
 		this.add(background);
-		
+
 		/* 프레임에 패널 올리기*/
 		mf.add(this);
 

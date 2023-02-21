@@ -6,7 +6,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 
-import com.puppy.witchcraft.game.view.pages.ForestMenu;
+import com.puppy.witchcraft.game.view.ForestMenu;
 
 public class MainFrame extends JFrame {
 	

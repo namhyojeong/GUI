@@ -1,7 +1,7 @@
 package com.puppy.witchcraft.run;
 
 import com.puppy.witchcraft.common.MainFrame;
-import com.puppy.witchcraft.game.view.pages.ForestMenu;
+import com.puppy.witchcraft.game.view.ForestMenu;
 
 public class Application {
 
