@@ -11,6 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import com.puppy.witchcraft.common.MainFrame;
+import com.puppy.witchcraft.game.controller.Forest1Controller;
 import com.puppy.witchcraft.game.view.ForestMenu;
 
 public class Forestfirst extends JPanel{
@@ -36,7 +37,14 @@ public class Forestfirst extends JPanel{
 		JButton getItemBtn = new JButton(new ImageIcon("images/select/forest/forest1-touch1.png"));
 		getItemBtn.setBounds(190, 410, 115, 95);
 		getItemBtn.setContentAreaFilled(false);
-		getItemBtn.setBorderPainted(false);
+		getItemBtn.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Forest1Controller foresttst1Controller = new Forest1Controller();
+				foresttst1Controller.Foresttst1Controller();
+			}
+		});
 		
 		JButton getItemBtn1 = new JButton(new ImageIcon("images/select/forest/forest1-touch2.png"));
 		getItemBtn1.setBounds(500, 275, 115, 95);
@@ -102,3 +110,5 @@ public class Forestfirst extends JPanel{
 		mf.getLayeredPane().setLayer(background, 0);
 	}
 }
+
+

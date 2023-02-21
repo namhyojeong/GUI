@@ -3,13 +3,25 @@
 <mapper namespace="com.puppy.witchcraft.game.model.mapper.forest.SqlMapper">
 
 	<resultMap type="com.puppy.witchcraft.game.model.dto.ItemDTO" id="ForestItemDTO">
-		<id property="number" column="ITEM_NO"/>
-		<result property="type" column="ITEM_TYPE"/>
-		<result property="name" column="ITEM_NAME"/>
-		<result property="info" column="ITEM_INFO"/>
-		<result property="sell" column="ITEM_SELL"/>
-		<result property="buy" column="ITEM_BUY"/>
-		<result property="imgno" column="IMAGE_NO"/>
+		<id property="itemNo" column="ITEM_NO"/>
+		<result property="itemType" column="ITEM_TYPE"/>
+		<result property="itemName" column="ITEM_NAME"/>
+		<result property="itemInfo" column="ITEM_INFO"/>
+		<result property="itemSell" column="ITEM_SELL"/>
+		<result property="itemBuy" column="ITEM_BUY"/>
+		<result property="imageNo" column="IMAGE_NO"/>
 	</resultMap>	
-
+		<select id="test" resultMap="ForestItemDTO">
+		SELECT
+			ITEM_NO
+		  , ITEM_TYPE
+		  , ITEM_NAME
+		  , ITEM_INFO
+		  , ITEM_SELL
+		  , ITEM_BUY
+		  , IMAGE_NO
+		FROM ITEM
+		WHERE ITEM_NO = 1
+		</select>
+			
 </mapper>
