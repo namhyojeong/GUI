@@ -9,6 +9,7 @@ public class Application {
 		
 		new MainFrame(); // 기본프레임세팅 
 		
+		
 	}
 
 }

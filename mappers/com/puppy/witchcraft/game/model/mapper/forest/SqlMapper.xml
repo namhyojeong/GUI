@@ -21,7 +21,7 @@
 		  , ITEM_BUY
 		  , IMAGE_NO
 		FROM ITEM
-		WHERE ITEM_NO = 1
+		ORDER BY RAND();
 		</select>
 			
 </mapper>

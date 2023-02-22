@@ -20,6 +20,13 @@ public class Forest1Service {
 		
 		List<ItemDTO> itemList = mapper.test();
 		
+		if(itemList != null && itemList.size() > 0) {
+			for(ItemDTO menu : itemList) {
+				System.out.println(menu);
+			}
+		} else {
+			System.out.println("불가능.");
+		}
 		sqlSession.close();
 		
 		return itemList;
