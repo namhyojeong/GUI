@@ -11,7 +11,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import com.puppy.witchcraft.common.MainFrame;
-import com.puppy.witchcraft.game.controller.Forest1Controller;
 import com.puppy.witchcraft.game.view.ForestMenu;
 
 public class Forestfirst extends JPanel{
@@ -37,39 +36,35 @@ public class Forestfirst extends JPanel{
 		JButton getItemBtn = new JButton(new ImageIcon("images/select/forest/forest1-touch1.png"));
 		getItemBtn.setBounds(190, 410, 115, 95);
 		getItemBtn.setContentAreaFilled(false);
-		getItemBtn.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				Forest1Controller foresttst1Controller = new Forest1Controller();
-				foresttst1Controller.Foresttst1Controller();
-			}
-		});
-		
+
+		//		getItemBtn.addActionListener(new ActionListener() {
+		//			
+		//			@Override
+		//			public void actionPerformed(ActionEvent e) {
+		//				Forest1Controller.getItem1();
+		//			}
+		//		});
+
 		JButton getItemBtn1 = new JButton(new ImageIcon("images/select/forest/forest1-touch2.png"));
 		getItemBtn1.setBounds(500, 275, 115, 95);
 		getItemBtn1.setContentAreaFilled(false);
-		getItemBtn1.setBorderPainted(false);
-		
+
 		JButton getItemBtn2 = new JButton(new ImageIcon("images/select/forest/forest1-touch3.png"));
 		getItemBtn2.setBounds(540, 60, 115, 95);
 		getItemBtn2.setContentAreaFilled(false);
-		getItemBtn2.setBorderPainted(false);
-		
+
 		JButton invenBtn = new JButton(new ImageIcon("images/ui/ui_inventory.png"));
 		invenBtn.setBounds(620, 460, 70, 70);
 		invenBtn.setContentAreaFilled(false);
-		invenBtn.setBorderPainted(false);
-		
+
 		JButton recipeBtn = new JButton(new ImageIcon("images/ui/ui_recipe.png"));
 		recipeBtn.setBounds(710, 460, 70, 70);
 		recipeBtn.setContentAreaFilled(false);
-		recipeBtn.setBorderPainted(false);
+
 
 		JButton forestexit = new JButton(new ImageIcon("images/ui/button_quit.png"));
 		forestexit.setBounds(0, 460, 170, 70);
 		forestexit.setContentAreaFilled(false);
-		forestexit.setBorderPainted(false);
 		forestexit.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -110,5 +105,3 @@ public class Forestfirst extends JPanel{
 		mf.getLayeredPane().setLayer(background, 0);
 	}
 }
-
-

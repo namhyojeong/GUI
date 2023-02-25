@@ -8,21 +8,10 @@ public class ItemDTO {
 	private String itemInfo;
 	private int itemSell;
 	private int itemBuy;
-	private String imageNo;	//이미지 테이블 참조
+	private int imageNo;	//이미지 테이블 참조
+	private int itemCount;
 	
 	public ItemDTO() {}
-
-	public ItemDTO(int itemNo, String itemType, String itemName, String itemInfo, int itemSell, int itemBuy,
-			String imageNo) {
-		super();
-		this.itemNo = itemNo;
-		this.itemType = itemType;
-		this.itemName = itemName;
-		this.itemInfo = itemInfo;
-		this.itemSell = itemSell;
-		this.itemBuy = itemBuy;
-		this.imageNo = imageNo;
-	}
 
 	public int getItemNo() {
 		return itemNo;
@@ -72,18 +61,27 @@ public class ItemDTO {
 		this.itemBuy = itemBuy;
 	}
 
-	public String getImageNo() {
+	public int getImageNo() {
 		return imageNo;
 	}
 
-	public void setImageNo(String imageNo) {
+	public void setImageNo(int imageNo) {
 		this.imageNo = imageNo;
+	}
+
+	public int getItemCount() {
+		return itemCount;
+	}
+
+	public void setItemCount(int itemCount) {
+		this.itemCount = itemCount;
 	}
 
 	@Override
 	public String toString() {
 		return "ItemDTO [itemNo=" + itemNo + ", itemType=" + itemType + ", itemName=" + itemName + ", itemInfo="
-				+ itemInfo + ", itemSell=" + itemSell + ", itemBuy=" + itemBuy + ", imageNo=" + imageNo + "]";
+				+ itemInfo + ", itemSell=" + itemSell + ", itemBuy=" + itemBuy + ", imageNo=" + imageNo + ", itemCount="
+				+ itemCount + "]";
 	}
-	
+
 }

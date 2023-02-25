@@ -2,26 +2,5 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.puppy.witchcraft.game.model.mapper.forest.SqlMapper">
 
-	<resultMap type="com.puppy.witchcraft.game.model.dto.ItemDTO" id="ForestItemDTO">
-		<id property="itemNo" column="ITEM_NO"/>
-		<result property="itemType" column="ITEM_TYPE"/>
-		<result property="itemName" column="ITEM_NAME"/>
-		<result property="itemInfo" column="ITEM_INFO"/>
-		<result property="itemSell" column="ITEM_SELL"/>
-		<result property="itemBuy" column="ITEM_BUY"/>
-		<result property="imageNo" column="IMAGE_NO"/>
-	</resultMap>	
-		<select id="test" resultMap="ForestItemDTO">
-		SELECT
-			ITEM_NO
-		  , ITEM_TYPE
-		  , ITEM_NAME
-		  , ITEM_INFO
-		  , ITEM_SELL
-		  , ITEM_BUY
-		  , IMAGE_NO
-		FROM ITEM
-		ORDER BY RAND();
-		</select>
-			
+
 </mapper>

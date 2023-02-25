@@ -36,33 +36,27 @@ public class Forestsecond extends JPanel{
 		JButton forestgoBtn = new JButton(new ImageIcon("images/select/forest/forest2-touch1.png"));
 		forestgoBtn.setBounds(80, 280, 115, 95);
 		forestgoBtn.setContentAreaFilled(false);
-		forestgoBtn.setBorderPainted(false);
-		
+
 		JButton forestgoBtn1 = new JButton(new ImageIcon("images/select/forest/forest2-touch2.png"));
 		forestgoBtn1.setBounds(420, 300, 115, 95);
 		forestgoBtn1.setContentAreaFilled(false);
-		forestgoBtn1.setBorderPainted(false);
 
 		JButton forestgoBtn2 = new JButton(new ImageIcon("images/select/forest/forest2-touch3.png"));
 		forestgoBtn2.setBounds(500, 65, 115, 95);
 		forestgoBtn2.setContentAreaFilled(false);
-		forestgoBtn2.setBorderPainted(false);
-		
+
 		JButton invenBtn = new JButton(new ImageIcon("images/ui/ui_inventory.png"));
 		invenBtn.setBounds(620, 460, 70, 70);
 		invenBtn.setContentAreaFilled(false);
-		invenBtn.setBorderPainted(false);
-		
+
 		JButton recipeBtn = new JButton(new ImageIcon("images/ui/ui_recipe.png"));
 		recipeBtn.setBounds(710, 460, 70, 70);
 		recipeBtn.setContentAreaFilled(false);
-		recipeBtn.setBorderPainted(false);
-		
+
 		JButton forestexit = new JButton(new ImageIcon("images/ui/button_quit.png"));
 		forestexit.setBounds(0, 460, 170, 70);
 		forestexit.setContentAreaFilled(false);
-		forestexit.setBorderPainted(false);
-		
+
 		/* 나가기 버튼 클릭 시 숲 선택화면으로 이동*/
 		forestexit.addActionListener(new ActionListener() {
 			@Override
